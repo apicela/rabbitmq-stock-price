@@ -2,7 +2,6 @@ package apicela.estoquepreco.controller;
 
 import apicela.estoquepreco.constants.RabbitmqConsts;
 import apicela.estoquepreco.dto.PriceDTO;
-import apicela.estoquepreco.dto.StockDTO;
 import apicela.estoquepreco.service.RabbitmqService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

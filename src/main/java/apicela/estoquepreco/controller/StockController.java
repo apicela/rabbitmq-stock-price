@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequestMapping("stock")
 public class StockController {
@@ -22,7 +23,7 @@ public class StockController {
     @PutMapping
     private ResponseEntity update(@RequestBody StockDTO stockDTO) {
         this.rabbitmqService.sendMessage(RabbitmqConsts.STOCK_QUEUE, stockDTO);
-        System.out.println("sended Message: " + stockDTO);
+        System.out.println("sended Message: " + stockDTO.productCode);
         return new ResponseEntity(HttpStatus.OK);
     }
 }
